@@ -1,0 +1,41 @@
+@import "common/variables";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+// endbower
+
+@import "common/global";
+
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/grid";
+@import "components/flex";
+@import "components/wp-classes";
+@import "components/font";
+@import "components/animation";
+@import "components/maxWidth";
+
+@import "layouts/header";
+@import "layouts/header_sticky";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/posthome";
+@import "layouts/store";
+@import "layouts/tinymce";
+@import "layouts/social";
+
+@import "pages/home";
+@import "pages/single-product";
+@import "pages/single-journey";
+@import "pages/single-post";
+@import "pages/cart";
+
+@import "slick/slick";
+@import "slick/slick-theme";
+
+@import "fancybox/jquery.fancybox.min";
+@import "fancybox/fancybox";

@@ -1,0 +1,68 @@
+.btn-shape{
+	border-radius: 100px;
+	padding: 10px 30px;
+	border: 1px solid ;
+	font-size: 14px;
+	letter-spacing: $letter-spacing-3;
+	text-align: center;
+	text-transform: uppercase;
+    line-height: 19px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    &:hover{
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+}
+a.btn-shape{
+	display: inline-block;
+}
+
+
+.btn-main-color{
+	color: $black-color;
+	background-color: $brand-primary;
+	border-color: $brand-primary;
+	font-family: 'BrandonText-Bold';
+	&:hover{
+		color: $black-color;
+		text-decoration: none;
+		background-color: #F0B400;
+        border-color:  #F0B400;
+	}
+}
+
+
+.btn-default{
+    color: #d7d7d7;
+    border-color: #d7d7d7;
+	background-color: transparent;
+	font-family: 'BrandonText';
+
+	&:hover{
+		text-decoration: none;
+		border-color: #1A1B1E;
+		color: #1A1B1E;
+	}
+}
+#more_posts.btn-loadmore{
+    padding-left: 50px;
+    position: relative;
+    &:hover{
+        color: #d7d7d7;
+        border-color: #d7d7d7;
+    }
+}
+#more_posts{
+    .imgload{
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translate(0,-50%);
+    }
+}

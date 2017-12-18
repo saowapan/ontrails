@@ -1,0 +1,53 @@
+@mixin prefixer($attr, $value) {
+    -webkit-#{$attr}: $value;
+    #{$attr}: $value;
+    -ms-#{$attr}: $value;
+}
+
+@mixin valueprefixer($attr, $value) {
+    #{$attr}: $value;
+    #{$attr}: -webkit-#{$value};
+    #{$attr}: -ms-#{$value};
+}
+
+.flex-col{
+    @include prefixer(flex-direction, column);
+}
+
+.flex-left{
+    @include valueprefixer(display, flex);    
+    @include prefixer(justify-content,flex-start);
+    @include prefixer(align-items, center);
+}
+.flex-right{
+  @include valueprefixer(display, flex);    
+    @include prefixer(justify-content,flex-end);
+    @include prefixer(align-items, center);
+}
+.flex-between{
+  @include valueprefixer(display, flex);    
+    @include prefixer(justify-content, space-between);
+    @include prefixer(align-items, center);
+}
+.flex-around{
+    @include valueprefixer(display, flex);    
+    @include prefixer(justify-content, space-around);
+    @include prefixer(align-items, center);
+}
+.flex-center{
+    @include valueprefixer(display, flex);    
+    @include prefixer(justify-content, center);
+    @include prefixer(align-items, center);
+}
+
+.flex-top{
+    @include valueprefixer(display, flex);    
+    @include prefixer(justify-content,center);
+    @include prefixer(align-items, flex-start);
+}
+.flex-bottom{
+  @include valueprefixer(display, flex);    
+    @include prefixer(justify-content,center);
+    @include prefixer(align-items, flex-end);
+}
+

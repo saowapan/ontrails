@@ -1,0 +1,102 @@
+.social-icon{
+	.social-link{
+		position: relative;
+	    width: 20px;
+	    height: 25px;
+	    margin-right: 10px;
+	    margin-left: 10px;
+	    color: $white-color;
+	    a{
+	    	display: block;
+		    width: 20px;
+		    height: 20px;
+		    overflow: hidden;
+		    position: relative;
+		    z-index: 2;
+		    opacity: 0;
+	    }
+	    &:hover{
+			color: $white-color;
+	    }
+	}
+	.social-link:before{
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
+	    z-index: 0;
+	    font-size: 20px;
+	}
+	.social-link:first-child{
+		margin-left: 0;
+	}
+	.social-link:last-child{
+		margin-right: 0;
+	}
+}
+	
+.social-button{
+	.social-link{
+    	width: 200px;
+		@include valueprefixer(display, flex);    
+    	@include prefixer(justify-content, center);
+   	 	@include prefixer(align-items, center);
+    	color: $white-color;
+    	position: relative;
+    	a{
+		    text-transform: uppercase;
+		    width: 100%;
+    		padding: 10px 25px 10px 45px;
+		    letter-spacing: $letter-spacing-3;
+		    -webkit-font-smoothing: auto;
+		    font-family: 'BrandonText'; 
+		    color:$white-color;
+		    text-decoration: none;
+		    font-size: 14px;
+		    line-height: 20px;
+		    border-radius: 100px;
+    		border: 1px solid;
+    		text-align: center;
+		}
+	}
+	.social-link:before {
+    	left: 30px;
+    	position: absolute;
+	    top: 50%;
+	    transform: translate(-50%,-50%);
+	    z-index: 0;
+	    font-size: 20px;
+    }
+    li.social-link{
+		margin: 10px auto;
+	}
+	li.social-link:first-child{
+		margin-left: auto;
+		margin-top: 20px;
+	}
+	li.social-link:last-child{
+		margin-right: auto;
+		margin-bottom: 0px;
+	}
+	li.fa-facebook{
+		a:hover{
+			background-color: $facebook-color;
+    		border-color: $facebook-color;
+    		transition: all 0.5s ease;
+		}
+	}
+	li.fa-instagram{
+		a:hover{
+			background-color: $instagram-color;
+    		border-color: $instagram-color;
+    		transition: all 0.5s ease;
+		}
+	}
+	li.fa-youtube-play{
+		a:hover{
+			background-color: $youtube-color;
+    		border-color: $youtube-color;
+    		transition: all 0.5s ease;
+		}
+	}	
+}

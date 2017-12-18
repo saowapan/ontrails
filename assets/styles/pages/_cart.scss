@@ -1,0 +1,207 @@
+body.woocommerce-page {
+	font-family: OpenSans;
+	.page-header h1,.woocommerce{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h1,h2{
+		font-family: UtopiaStd-Bold;
+	}
+	.content{
+	    padding: 0;
+	    width: 100%;
+	}
+	.woocommerce{
+	    padding: 80px 15px;
+	}
+	.main .page-header{
+		background-color: $black-color-bg;
+    	padding-top: 209px;
+    	padding-bottom: 115px;
+    	h1{
+		    text-align: center;
+		    color: #fff;
+		    font-size: 48px;
+		    line-height: 1.2;
+    	}
+    	h1:before{
+    		box-sizing: inherit;
+    		content: '';
+    		display: block;    
+    		width: 50px;
+		    border-top: 2px solid $brand-primary;
+		    margin: 0 auto 10px;
+    	}
+	}
+	.woocommerce-cart-form{
+		.coupon{
+			display: none;
+		}
+	}
+	/* Button */
+	.woocommerce .woocommerce-cart-form input.button{
+		border-radius: 100px;
+		padding: 10px 30px;
+		border: 1px solid ;
+		font-size: 14px;
+		letter-spacing: $letter-spacing-3;
+		text-align: center;
+		text-transform: uppercase;
+	    line-height: 19px;
+	    cursor: pointer;
+	    background-color: transparent;
+		font-family: 'BrandonText';
+	    color: #d7d7d7;
+	    border-color: #d7d7d7;
+		&:hover{
+			color: #1A1B1E;
+			text-decoration: none;
+			border-color:#1A1B1E;
+		}
+	}
+	.woocommerce .cart_totals .wc-proceed-to-checkout a.button,
+	.woocommerce .return-to-shop a.button,
+	.woocommerce .woocommerce-checkout input.button{
+		border-radius: 100px;
+		padding: 10px 30px;
+		border: 1px solid ;
+		font-size: 14px;
+		letter-spacing: $letter-spacing-3;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 19px;
+		cursor: pointer;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		display: inline-block;
+		&:hover{
+		    -webkit-transition: all 0.3s ease;
+		    -moz-transition: all 0.3s ease;
+		    -o-transition: all 0.3s ease;
+		    transition: all 0.3s ease;
+		}
+	}
+	.woocommerce .cart_totals .wc-proceed-to-checkout a.button,
+	.woocommerce .return-to-shop a.button,
+	.woocommerce .woocommerce-checkout input.button{
+		color: $black-color;
+		background-color: $brand-primary;
+		border-color: $brand-primary;
+		font-family: 'BrandonText-Bold';
+		&:hover{
+			color: $black-color;
+			text-decoration: none;
+			background-color: #F0B400;
+		    border-color:  #F0B400;
+		}
+	}
+}
+@media (max-width: 991px){
+	body.woocommerce-page {
+		.page-header h1,.woocommerce{
+			width: 100%;
+		}
+	}
+}
+@media only screen and (min-width : 1400px) {
+	body.woocommerce-page {
+		.page-header h1,.woocommerce{
+			width: 1300px;
+		}	
+	}
+}
+@media only screen and (min-width : 1600px) {
+	body.woocommerce-page {
+		.page-header h1,.woocommerce{	
+			width: 1400px;
+		}
+	}
+}
+@media only screen and (min-width : 1800px) {
+	body.woocommerce-page {
+		.page-header h1,.woocommerce{	
+			width: 1600px;
+		}
+	}
+}
+
+
+body.checkout{
+	.woocommerce .col2-set .col-2,
+	.woocommerce .col2-set .col-1{
+		max-width: 100%;   
+		padding: 0;
+	}
+	.woocommerce form {
+		.form-row {
+			input.input-text,textarea{
+				padding: 10px 10px;
+			}
+			input::-webkit-input-placeholder{
+				color: #d7d7d7;
+				font-family: 'OpenSans';
+			}
+			input:-moz-placeholder{
+				color: #d7d7d7;
+				font-family: 'OpenSans';
+			}
+			input::-moz-placeholder{
+				color: #d7d7d7;
+				font-family: 'OpenSans';
+			}
+			input:-ms-input-placeholder{
+				color: #d7d7d7;
+				font-family: 'OpenSans';
+			}
+			textarea::-webkit-input-placeholder{
+				color: #d7d7d7;
+				font-family: 'OpenSans';
+			}
+			textarea:-moz-placeholder{
+				color: #d7d7d7;
+				font-family: 'OpenSans';
+			}
+			textarea::-moz-placeholder{
+				color: #d7d7d7;
+				font-family: 'OpenSans';
+			}
+			textarea:-ms-input-placeholder{
+				color: #d7d7d7;
+				font-family: 'OpenSans';
+			}
+		}
+	}		
+}
+
+body.my-account{
+	.woocommerce form {
+		.form-row {
+			input.input-text,textarea{
+				padding: 10px 10px;
+			}
+		}
+		input.button{
+			@extend .btn-shape;
+			@extend .btn-main-color;
+		}
+	}		
+}
+
+@media screen and (max-width: 767px){
+	body.woocommerce-page .main .page-header {
+	    padding-top: 110px;
+	    padding-bottom: 50px;
+	}
+	body.woocommerce-page .main .page-header h1{
+		font-size: 36px;
+    	line-height: 1.61;
+	}
+}
+
+@media screen and (max-width: 600px){
+	body.woocommerce-page .main .page-header {
+	    padding-top: 50px;
+	}
+}

@@ -1,0 +1,225 @@
+.section-header-home{
+	position: relative;
+    width: 100%;
+    margin-bottom: 0px;
+    display: block;
+    height: auto;
+    .custom-header-media.image-media{
+    	 background-color: $black-color-bg;
+    }
+    .custom-header-media{
+		bottom: 0;
+	    left: 0;
+		right: 0;
+	    top: 0;
+	    width: 100%;
+	    background-repeat: no-repeat; 
+	    background-size: cover;
+	    background-position: center 0;
+    	height: calc(100vh - 0px);
+		max-height: 100%;
+	    overflow: hidden;
+	    position: relative;
+	    min-height: 500px;
+	    .overlay{
+	    	width: 100%;
+		    height: 25%;
+		    background-image: linear-gradient(0deg,rgba(0,0,0,0) 0,#000 74%);
+		    opacity: 0.5;
+	    }
+	    img{
+	    	height: 100%;
+			left: 0;
+			-o-object-fit: cover;
+			object-fit: cover;
+			top: 0;
+			-ms-transform: none;
+			-moz-transform: none;
+			-webkit-transform: none;
+			transform: none;
+			width: 100%;
+			position: fixed;
+			max-width: 1000%;
+	    	min-height: 100%;
+	    	min-width: 100vw;
+	    } 
+	    video{
+	    	position: fixed;
+	    	top: 50%;
+	    	left: 50%;
+	    	min-width: 100%;
+	    	min-height: 100%;
+	    	width: auto;
+	    	height: auto;
+	    	z-index: -100;
+	    	transform: translate(-50%,-50%);
+	    	transition: 1s opacity;
+	    }
+	}
+	.custom-header-content{
+		display: inline-block;
+		transform: translate(0,-50%);
+	    position: absolute;
+	    top: 50%;
+	    left: 0;
+	    width: 100%;
+	    p.main-color{
+	    	letter-spacing: $letter-spacing-2;
+	    	font-size: 14px;
+	    	line-height: 20px;
+	    	font-family: 'BrandonText-Bold';
+	    	margin-bottom: 0;
+	    }
+	    p.white-color{
+		    margin-bottom: 30px;
+		    margin-right: 90px;
+	    }
+	    h2{
+  			margin: 25px 0;
+	    }
+	    .btn-shape{
+	    	font-size: 12px;
+	    	padding: 10px 25px;
+	    }
+	}
+
+}
+
+
+.section-join-me{
+	position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    padding: 80px 0 115px;
+	h3{
+	    color: $white-color;
+	    margin-bottom: 25px;
+	}
+	p{
+	    color: $white-color;
+	    margin-bottom: 30px;
+	}
+	.container{
+		position: relative;
+    	z-index: 1;
+	}
+	.overlay{
+		position: absolute;
+	    width: 100%;
+	    top: 0;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.3);
+	}
+}
+
+.section-supported{
+	position: relative;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    padding: 30px 0 50px;
+    p{
+    	font-size: 10px;
+	  	letter-spacing: $letter-spacing-2;
+	  	text-align: center;
+	  	color: #d7d7d7;
+	  	margin: 0;
+	  	font-family: 'BrandonText';
+    }
+    .wrap-img{
+    	margin: 30px 15px 0;
+    	flex: 1 1 100%;
+    }
+}
+
+body.logged-in{
+	.section-header-home{
+		top: -32px;
+		.custom-header-content{
+			margin-top: 32px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1199px){
+	.section-header-home .custom-header-content p.white-color{
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 991px){
+	body.logged-in{
+		.section-header-home{
+			.custom-header-content{
+				/* Menu 60px */
+	    		/*margin-top: 30px;*/
+	    		margin-top: 46px; /* 30px + (32/2) */ 
+			}
+		}
+	}
+	.section-header-home {
+		.custom-header-content{
+			/* Menu 60px ( 60 / 2 )*/
+	    	margin-top: 30px;
+   	 		margin-bottom: 30px;
+		}
+		.custom-header-media .overlay{
+			height: 100%;
+    		opacity: 0.1;
+		}
+	}
+}
+@media (max-width: 782px){
+	body.logged-in .section-header-home {
+	   top: -46px;
+	   .custom-header-content{
+		/* Menu 60px */
+	    	/*margin-top: 30px;*/
+	    	/* margin-top: 46px; /* 30px + (32/2) */ 
+	    	margin-top: 53px; /* 30px + (46 /2 ) */
+		}
+	}
+}
+
+@media screen and (max-width: 767px){	
+	.section-header-home{
+		.custom-header-content {
+			h2{
+				margin: 5px 0 30px;
+			}	
+			p.main-color{
+				margin: 0;
+			}
+		}
+	}
+	.section-join-me {
+		padding: 60px 0;
+		h3{
+			margin-bottom: 20px;
+		}
+		p{
+			margin-bottom: 20px;
+		}
+	}
+	.section-supported{
+		padding: 20px 0 40px;
+	}
+}
+
+@media (max-width: 600px){
+	body.logged-in .section-header-home {
+	   top: -46px;
+	   .custom-header-content{
+		/* Menu 60px */
+	    	/*margin-top: 30px;*/
+	    	/* margin-top: 46px; /* 30px + (32/2) */ 
+	    	margin-top: 30px; /* reset */
+		}
+	}
+}
+@media (max-width: 575px){
+	.section-supported .wrap-img{
+	    flex: none;
+	}
+}
